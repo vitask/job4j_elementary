@@ -25,10 +25,10 @@ public class Converter {
         boolean passed = expected == out;
         System.out.println("140 rubles are 2 euro. Test result : " + passed);
 
-        float in2 = 600;
-        float expected2 = 10;
-        float out2 = Converter.rubleToDollar(in2);
-        boolean passed2 = expected2 == out2;
-        System.out.println("600 rubles are 10 dollar. Test result : " + passed2);
+        in = 600;
+        expected = 10;
+        out = Converter.rubleToDollar(in);
+        passed = expected == out;
+        System.out.println("600 rubles are 10 dollar. Test result : " + passed);
     }
 }
