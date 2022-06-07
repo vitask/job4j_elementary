@@ -18,7 +18,4 @@ public class MathFunction {
         return first / second;
     }
 
-    public static void main(String[] args) {
-
-    }
 }
