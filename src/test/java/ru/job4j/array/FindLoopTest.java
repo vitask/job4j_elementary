@@ -31,4 +31,37 @@ public class FindLoopTest {
         int out = FindLoop.indexOf(data, el);
         Assert.assertEquals(expected, out);
     }
+
+    @Test
+    public void whenDiapasonHas2Then3() {
+        int[] data = new int[] {5, 2, 10, 2, 4};
+        int el = 2;
+        int start = 2;
+        int finish = 4;
+        int expected = 3;
+        int out = FindLoop.indexOfRange(data, el, start, finish);
+        Assert.assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenDiapasonHasNot11ThenMinus1() {
+        int[] data = new int[] {6, 2, 13, 9, 11, 3, 6, 9};
+        int el = 11;
+        int start = 0;
+        int finish = (data.length - 1) / 2;
+        int expected = -1;
+        int out = FindLoop.indexOfRange(data, el, start, finish);
+        Assert.assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenDiapasonHas9Then0() {
+        int[] data = new int[] {9, 7, 5, 3, 1};
+        int el = 9;
+        int start = 0;
+        int finish = 2;
+        int expected = 0;
+        int out = FindLoop.indexOfRange(data, el, start, finish);
+        Assert.assertEquals(expected, out);
+    }
 }
